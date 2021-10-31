@@ -7,14 +7,14 @@ test('stylish diff json', () => {
   const filepath1 = getPath('file1.json');
   const filepath2 = getPath('file2.json');
   const result = readFileSync(getPath('result.txt'), 'utf-8');
-  expect(genDiff(filepath1, filepath2, 'default')).toEqual(result);
+  expect(genDiff(filepath1, filepath2, 'stylish')).toEqual(result);
 });
 
 test('stylish diff yml', () => {
   const filepath1 = getPath('file1.yml');
   const filepath2 = getPath('file2.yml');
   const result = readFileSync(getPath('result.txt'), 'utf-8');
-  expect(genDiff(filepath1, filepath2, 'default')).toEqual(result);
+  expect(genDiff(filepath1, filepath2, 'stylish')).toEqual(result);
 });
 
 test('plain diff json', () => {

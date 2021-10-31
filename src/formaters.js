@@ -3,7 +3,7 @@ import plainRender from './plainRender.js';
 import jsonRender from './jsonRender.js';
 
 const formatters = {
-  default: stylishRender,
+  stylish: stylishRender,
   plain: plainRender,
   json: jsonRender,
 };
