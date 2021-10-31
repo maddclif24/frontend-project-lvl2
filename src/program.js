@@ -6,7 +6,6 @@ program
     .version('1.0.0', '-V, --version', 'output the version number')
     .option('-f, --format [type]', 'output format', 'default')
     .arguments('<filepath1> <filepath2>')
-    .action((filepath1, filepath2) => console.log(genDiff(filepath1, filepath2, program.opts().format)))
-    .parse(process.argv);
+    .action((filepath1, filepath2) => console.log(genDiff(filepath1, filepath2, program.opts().format)));
 
-export default () => program;
+export default () => program.parse(process.argv);
