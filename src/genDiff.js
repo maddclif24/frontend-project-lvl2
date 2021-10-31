@@ -34,7 +34,7 @@ const buildAST = (object1, object2) => {
   });
 };
 
-export default (filepath1, filepath2, format) => {
+export default (filepath1, filepath2, format = 'stylish') => {
   const file1 = parse(readFileSync(filepath1, 'utf-8'), getFileExtension(filepath1));
   const file2 = parse(readFileSync(filepath2, 'utf-8'), getFileExtension(filepath2));
   const ast = buildAST(file1, file2);
