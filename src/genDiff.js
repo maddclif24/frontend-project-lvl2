@@ -9,7 +9,7 @@ const getFileExtension = (filepath) => path.extname(filepath).substr(1);
 const isNested = (value1, value2) => _.isObject(value1) && _.isObject(value2);
 
 const buildAST = (object1, object2) => {
-  const uniqKeys = _.uniq([..._.keys(object1), ..._.keys(object2)]).sort();
+  const uniqKeys = _.sortBy(_.uniq([..._.keys(object1), ..._.keys(object2)]));
   return uniqKeys.map((key) => {
     const value1 = object1[key];
     const value2 = object2[key];

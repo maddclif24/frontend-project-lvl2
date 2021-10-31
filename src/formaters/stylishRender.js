@@ -6,7 +6,7 @@ const stringify = (value, deep) => {
   if (!_.isObject(value)) {
     return value;
   }
-  const keys = _.keys(value).sort();
+  const keys = _.sortBy(_.keys(value));
   const result = keys.map((key) => {
     const string = `    ${key}: ${stringify(value[key], deep + 1)}`;
     return `${ident.repeat(deep)}${string}`;
