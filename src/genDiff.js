@@ -38,6 +38,5 @@ export default (filepath1, filepath2, format) => {
   const file1 = parse(readFileSync(filepath1, 'utf-8'), getFileExtension(filepath1));
   const file2 = parse(readFileSync(filepath2, 'utf-8'), getFileExtension(filepath2));
   const ast = buildAST(file1, file2);
-  console.log(format);
   return render(format)(ast);
 };
