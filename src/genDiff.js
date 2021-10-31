@@ -2,7 +2,7 @@ import _ from 'lodash';
 import { readFileSync } from 'fs';
 import path from 'path';
 import parse from './parse.js';
-import render from './formaters.js';
+import render from './formaters/index.js';
 
 const getFileExtension = (filepath) => path.extname(filepath).substr(1);
 
